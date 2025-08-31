@@ -1,4 +1,7 @@
-# bonjour-front
+# Bonjour-front
+
+## Project preparation:
+Modify the Bonjour backend path in the .env.* and vue.config.js files, configure nginx yourself, and then you can run it.
 
 ## Project setup
 ```
