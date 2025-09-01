@@ -34,7 +34,7 @@
 </template>
 
 <script>
-import BJLogo from '../assets/image/bonjour_logo.png';
+import BJLogo from '../../public/bonjour_logo.png';
 export default {
   name: "BJLogin",
   components: {},
