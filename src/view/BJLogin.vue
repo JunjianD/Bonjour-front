@@ -2,6 +2,9 @@
   <div class="login-view">
     <div class="login-content">
       <div class="login-intro">
+        <div class="login-logo">
+          <img :src="BJLogo" alt="Bonjour Logo">
+        </div>
       </div>
       <el-form class="login-form" :model="loginForm" status-icon :rules="rules" ref="loginForm" label-width="60px"
                @keyup.enter="submitForm('loginForm')">
@@ -31,6 +34,7 @@
 </template>
 
 <script>
+import BJLogo from '../assets/image/bonjour_logo.png';
 export default {
   name: "BJLogin",
   components: {},
@@ -49,6 +53,7 @@ export default {
 
     };
     return {
+      BJLogo: BJLogo,
       loginForm: {
         terminal: this.$enums.TERMINAL_TYPE.WEB,
         userName: '',
@@ -148,6 +153,11 @@ export default {
       flex: 1;
       padding: 40px;
       max-width: 600px;
+
+      .login-logo img {
+        max-width: 480px;   // 限制宽度，避免撑破布局
+        height: auto;
+      }
 
       .login-title {
         text-align: center;
